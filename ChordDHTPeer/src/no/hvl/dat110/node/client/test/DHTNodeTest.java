@@ -144,7 +144,7 @@ class DHTNodeTest {
 				
 				assertArrayEquals(keys.toArray(), node.getNodeKeys().toArray());			// keys
 				
-//				keys.forEach(System.out::println);
+				keys.forEach(System.out::println);
 				
 			} catch (RemoteException e) {
 				e.printStackTrace();

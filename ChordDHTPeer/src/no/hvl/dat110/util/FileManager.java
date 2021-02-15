@@ -28,12 +28,11 @@ public class FileManager {
 
 		// collect the 5 processes from the Util class
 		Map<String, Integer> processes = Util.getProcesses();
+		Set<String> names = processes.keySet();
 
 		// iterate over the processes(peers) and the replicas
-		// for each replica, add the replica to the peer if the condition: pred <
-		// replica <= peer is satisfied
-		for (Map.Entry<String, Integer> process : processes.entrySet()) {
-			String name = process.getKey();
+		// for each replica, add the replica to the peer if the condition: pred < replica <= peer is satisfied
+		for (String name : names) {
 			int port = processes.get(name);
 			NodeInterface node = Util.getProcessStub(name, port);
 			BigInteger nodeID = node.getNodeID();
