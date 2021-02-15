@@ -134,14 +134,7 @@ class DHTNodeTest {
 				List<BigInteger> keys = nodeKeys.get(node.getNodeName());
 				
 				assertEquals(esucclist.get(node.getNodeName()), succ);						// succ
-				assertEquals(epredlist.get(node.getNodeName()), pred);						// pred
-				
-//				System.out.println("KEYS");
-//				keys.stream().forEach(System.out::println);
-//				System.out.println("NODEKEYS");
-//				System.out.println(node.getNodeName());
-//				node.getNodeKeys().stream().forEach(System.out::println);
-				
+				assertEquals(epredlist.get(node.getNodeName()), pred);						// pred				
 				assertArrayEquals(keys.toArray(), node.getNodeKeys().toArray());			// keys
 				
 				keys.forEach(System.out::println);

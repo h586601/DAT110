@@ -25,8 +25,8 @@ public class Hash {
 	 */
 	public static BigInteger hashOf(String entity)  {		
 		
-		MessageDigest md = null;
 		// Use MD5 with 128 bits digest
+		MessageDigest md = null;
 		try {
 			md = MessageDigest.getInstance("MD5");
 		} catch (NoSuchAlgorithmException e) {
