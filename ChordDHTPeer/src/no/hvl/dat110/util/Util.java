@@ -38,7 +38,7 @@ public class Util {
 
 		if (lower.compareTo(upper) > 0) {
 			upper = upper.add(size);
-			if (identifier.compareTo(lower) < 0) {
+			if (identifier.compareTo(upperNode) < 0) {
 				identifier = identifier.add(size);
 			}
 		}
