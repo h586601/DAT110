@@ -52,8 +52,6 @@ public class VectorClock implements Serializable {
 				vectorclock.set(k, vector.get(k));
 			}
 		}
-		
-		vectorclock.set(index, vectorclock.get(index)+1);
 	}
 	
 	/**
@@ -78,7 +76,7 @@ public class VectorClock implements Serializable {
 		
 		/** condition 2 **/
 		boolean prevmsgsdelivered = true;
-		for(int k = 0; k < clock_vi.size(); k++) {
+		for(int k = 0; k < vectorclock.size(); k++) {
 			if(prevmsgsdelivered && (k != i)) {
 					prevmsgsdelivered = (clock_vi.get(k).compareTo(clock_vj.get(k)) <= 0);
 			}

@@ -96,7 +96,7 @@ public class VectorProcess extends UnicastRemoteObject implements ProcessInterfa
 
 		vectorclock.updateClockRule1();
 
-		VectorClock vc = new VectorClock(replicas.size(), indexOf(processName));
+		VectorClock vc = new VectorClock(vectorclock.getVectorclock(), vectorclock.getIndex());
 
 		Message msg_c = new Message(vc, processName);
 		msg_c.setOptype(msg.getOptype());
