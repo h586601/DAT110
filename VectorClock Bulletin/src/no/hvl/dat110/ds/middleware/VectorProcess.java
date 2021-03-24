@@ -150,9 +150,13 @@ public class VectorProcess extends UnicastRemoteObject implements ProcessInterfa
 			deliverMessage(message);
 		} else {
 			queue.add(message);
+			if (!started) {
+				started = true;
+				checkQueue();
+			}
 		}
 
-		checkQueue();
+//		checkQueue();
 	}
 
 	private void deliverMessage(Message message) throws RemoteException {
