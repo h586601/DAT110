@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="libs/gson-2.8.6.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
 	<classpathentry kind="lib" path="C:/Users/frkmj/Progfiler/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/okhttp-3.4.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/frkmj/Progfiler/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/okio-1.9.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
